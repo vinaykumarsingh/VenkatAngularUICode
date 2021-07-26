@@ -292,3 +292,29 @@
       visibility: hidden;
     }
   }
+
+  /* #testID {
+    background: #0c0ce2;
+    border: 2px solid red;
+    font-size: 16px;
+    font-family: auto
+  } */
+  .parentDiv {
+    background: #b2b2dc;
+    border: 2px solid red;
+    font-size: 16px;
+    font-family: auto;
+    border: 2px solid black;
+
+  }
+  .spanContainer {
+    background: red;
+    height: 39px;
+    width: 50%;
+  }
+
+  .parentDiv .spanContainer span:nth-child(2) {
+    padding: 20px;
+    color: rgb(228, 222, 222);
+    font-size: 26px
+  }

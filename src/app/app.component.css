@@ -292,7 +292,7 @@
       visibility: hidden;
     }
   }
-
+/* //Id Selector */
   /* #testID {
     background: #0c0ce2;
     border: 2px solid red;
@@ -317,4 +317,95 @@
     padding: 20px;
     color: rgb(228, 222, 222);
     font-size: 26px
+  }
+  .positionExample {
+    position: relative;
+  }
+
+  .positionExample div{
+    height: 100px;
+    border: 2px solid red;
+    width: 40%;
+  }
+  .rel {
+    background: blanchedalmond;
+    position: relative;
+    top: 66px;
+    left: 99px;
+  }
+
+  .abs {
+    background: blue;
+    background: blue;
+    position: absolute;
+    top: 0px;
+    left: 50px;
+  }
+
+  .fxd {
+    background: blueviolet;
+    background: blueviolet;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+
+  .flexExample div {
+    width: 20%;
+    height: 200px;
+    background: blueviolet;
+  }
+
+  .flexExample div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 1000px;
+  }
+  .flexExample span {
+    color: red;
+    
+  }
+  .accordion {
+    width: 500px;
+  }
+/* //class selector */
+  .accordianContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 17px solid red;
+  }
+  /* // Attribute selector */
+  a[target=_blank] {
+    border: 2px solid black;
+    background: black;
+    padding: 9px;
+    margin: 20px;
+    color: #fff;
+    border-radius: 14px;
+  }
+
+  input[type=button] {
+    border: 10px solid blue;
+    background: black;
+    padding: 9px;
+    margin: 20px;
+    color: #fff;
+    border-radius: 14px;
+  }
+  input[type=button] {
+    border: 10px solid chartreuse;
+  }
+/* //Psudo class */
+  a::before{
+    border: 10px solid red;
+    content: 'test';
+  }
+
+  .inputContainer> input {
+    border: 20px solid rgb(157, 255, 0); 
+  }
+  .inputContainer + input {
+    border: 20px solid rgb(255, 0, 212) !important
   }

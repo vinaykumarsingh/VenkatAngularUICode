@@ -101,22 +101,113 @@ export class AppComponent implements OnInit{
     // tempStr.substring(5)
 
     ////Substr 
-    let tempStr = 'vinaykumarsingh'
-    let temp1 ;
-    temp1 = tempStr.substr(3,10)
+    // let tempStr = 'vinaykumarsingh'
+    // let temp1 ;
+    // temp1 = tempStr.substr(3,10)
 
     // concat
-    tempStr.concat("ranchi")
+    // tempStr.concat("ranchi")
 
     //uppercase
-    tempStr.toUpperCase()
+    // tempStr.toUpperCase()
     //trim
-    let x = '  vs3486@gmail.com     '
-    x.trim() === 'vs3486@gmail.com'
+    // let x = '  vs3486@gmail.com     '
+    // x.trim() === 'vs3486@gmail.com'
 
     //string to array
-    var vv = 'vinay singh'
-    vv.split(" ")
+    // var vv = 'vinay singh'
+    // vv.split(" ")
+
+    //NAN - let x = 300/ "Ranchi";
+
+    // var f1 = 2.345
+    // f1.toFixed(2)
+    // f1.toFixed(3)
+
+    //Number()
+    // Number(true)
+    // Number(false)
+    // Number("11")
+    // Number("Ranchi")
+    // Number("12.23")
+    //parseInt => Alwway sreturn whole Number
+    // Number.parseInt("10")
+    // Number.parseInt("-10")
+    // Number.parseInt("12 23 345")
+
+
+    // Array - Call by Address/ Reference
+    const a = ['a', 'b', 'c']
+    a[0]// a
+    a[a.length-1]//c
+
+    const temp1 = []
+    temp1[0] = 2;
+    temp1[1] = 3;
+    console.log(temp1);
+// Creating new array other way
+    const temp2 = new Array('Vinay', 'Singh')
+    console.log(temp2)
+    if(temp2.length) console.log('true')
+    // Accesing array elemnts
+    temp2[0]
+    temp2[1]
+
+    //Looping Array
+    const temp3 = ['Vinay', 'Kumar', 'Singh']
+
+    // //For Loop
+    // for (let i= 0; i<temp3.length; i++) {
+    //   console.log(temp3[i])
+    // }
+
+    //forEach Loop
+    // temp3.forEach( x => {
+    //   console.log(x)
+    // })
+
+    // Adding and Removing array elemnts 
+    const addArray = ['a','b',1,2,3,4,5]
+    addArray.push('pushedItem');
+    addArray[addArray.length] = "AnotherPush";
+    console.log(addArray)
+
+    addArray.pop();
+
+    //check if data is array 
+    Array.isArray(addArray) 
+
+    const testObj = {
+      'a':123,
+      'b':1234
+    }
+
+    //Array Shify / Unshift
+    //shift is similar to pop but remove 1st item ie 0th Item
+    //unshift is similar to push but add 1st item ie 0th Item
+
+    const city = ['a','b', 'c']
+    // city.shift();
+    // city.unshift('d');
+
+    // console.log(city);
+
+    // Delete array Item - Delete leavs  undefined value. It delete array item value only 
+    // delete city[2]
+    // console.log(city);
+
+    // Splice
+    city.splice(1,0,'x','y','z')
+    console.log(city);
+    // Adding and deleting
+    city.splice(3,1,'p','q')
+    // Adding
+    city.splice(3,0,'p','q')
+
+    // deleting
+    city.splice(3,1)
+
+    // merging two arrays
 
   }
 }

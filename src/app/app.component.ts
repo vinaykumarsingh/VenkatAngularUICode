@@ -207,7 +207,53 @@ export class AppComponent implements OnInit{
     // deleting
     city.splice(3,1)
 
+    // Test
+    const objA = {
+      firstelemrnt: 'd',
+      secondelement: 'e',
+      thirdelement:'f'
+    }
+
+    const arrayA:any = ['a', 'b']
+
+    arrayA.push(objA)
+    console.log(arrayA)
+
+    let temp11 = "ABC"
+    temp11 = "ABCVDFFD"
+    
+    var Array1 = [1,2,3,4,5]
+    // const Array2 = [2,3,4,5,6]
+    const Array2 = []
+    for (var i= 0 ; i<Array1.length; i++ ) {
+
+      Array1[i] = Array1[i]+1
+
+      let test1 = "test1"
+      var test2 = "test2"
+
+    }
+
+    // console.log(Array2)
+    // console.log(test2)
+    // console.log(test1)
+
+
     // merging two arrays
+    const Array11 = [1,2,3]
+    const Array12 = [4,5,6]
+    const Array13 = [7,8,9]
+
+    // const final = Array11.concat(Array12, Array13)
+    const final = Array11.concat(Array12.concat(Array13))
+
+    console.log(final);
+
+    //Sorting
+    const array123 = ['bal','apple','cat']
+    array123.sort()
+    console.log(array123)
+
 
   }
 }

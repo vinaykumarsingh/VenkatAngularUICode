@@ -253,7 +253,62 @@ export class AppComponent implements OnInit{
     const array123 = ['bal','apple','cat']
     array123.sort()
     console.log(array123)
+// Sorting Failed with .sort() method, it works for strings only
+    const arrayNum = [10, 12, 34, 1, 2, 4,3]
+    arrayNum.sort()
+    console.log(arrayNum)
+
+    const arrayNum12 = [10, 12, 34, 1, 2, 4,3]
+    // I want to get lowest and highest from above array 
+
+    // [1, 12, 34, 10, 2, 4,3]
+    // [1, 2, 34, 12, 10, 4,3]
+    // [1, 2, 12, 34, 10, 4,3]
+    // [1, 2, 10, 34, 12, 4,3]
+    // [1, 2, 4, 34, 12, 10,3]
+    // [1, 2, 3, 34, 12, 10,4]
+
+    arrayNum12.sort((a , b) =>{
+      return a -b
+    });
+
+    console.log(arrayNum12)
+
+    const lapop = [
+      {brandName:'Acer', YearOfMfg: 2020},
+      {brandName:'MAC', YearOfMfg: 1990},
+      {brandName:'Lenevo', YearOfMfg: 2022}
+    ]
+
+    lapop.sort((a , b) =>{
+      return a.YearOfMfg - b.YearOfMfg
+    });
+
+    console.log(lapop)
 
 
+    // Sort Array of object based on brandName ie string
+
+    // .map / map every elempt *2
+
+    const arrayToMap = [1,3,7,3,5,8,5]
+
+    const mappedArray = arrayToMap.map(function (value, index, arrayToMap) {
+      console.log('value', value)
+      console.log('index', index)
+      console.log('arrayToMap', arrayToMap)
+      
+      return arrayToMap[index] *2
+
+
+    })
+
+    console.log('mappedArray===>', mappedArray)
+// Infinite loop
+    for (let i =0; i<2; i++) {
+      debugger;
+      i = i-1
+    }
   }
+
 }

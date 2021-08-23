@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { concat } from 'rxjs';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,11 +11,12 @@ export class AppComponent implements OnInit{
 // let let1: string = 'singh'
 // constru
 // const
+  nameGlocal : string = ""
 
-  title = 'Training';
+  title = '';
 
   constructor() {
-
+    this.title = "TITLE"
   }
 
   ngOnInit() {
@@ -304,11 +304,71 @@ export class AppComponent implements OnInit{
     })
 
     console.log('mappedArray===>', mappedArray)
-// Infinite loop
-    for (let i =0; i<2; i++) {
-      debugger;
-      i = i-1
+    // Infinite loop
+    // for (let i =0; i<2; i++) {
+    //   debugger;
+    //   i = i-1
+    // }
+
+
+    //Hoisting.
+    console.log(x);
+    var x = 10
+
+    // Explaining Scopiing 
+
+    // 1) Global
+    // 2) block
+    // 3) Functopn
+
+
+    // 1) Global
+
+    console.log(this.nameGlocal)
+
+
+    // 2) block
+
+    for(let i=0; i<10; i++) {
+      console.log(this.nameGlocal)
+
+      let nameBlock = "kumar"
+      console.log(nameBlock)
+      
     }
+    // console.log(nameBlock)
+
+    // 3) Functopn
+    this.functionTestingScope("vinay", "Ranchi")
+
   }
 
+  functionTestingScope(data,data1) {
+    console.log(data)
+    console.log(data1)
+    let xyzFunctionTestingScope = "Jharkhand"
+    let reciver = this.anotherFunction(xyzFunctionTestingScope)
+
+    console.log(reciver)
+
+  }
+  // anotherFunction(data){
+  //   console.log(data)
+  //   return data + "Test"
+  // }
+  // console.log(xyzFunctionTestingScope)
+
+  // arrow function
+  anotherFunction = (data) => {
+    // do some thing
+    //some code here
+    console.log(this.title)
+    return data + "Test";
+  }
+
+
 }
+
+// class xyx extends AppComponent {
+//   cons
+// }

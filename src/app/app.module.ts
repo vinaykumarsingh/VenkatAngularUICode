@@ -7,10 +7,11 @@ import { AppUIBasics } from "./Components/UIBasics/uiBasics.component"
 import { AppAngularBasics1 } from "./Components/AngularBasics1/angularBasics1.component"
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppAngularBasics2 } from './Components/AngularBasics2/angularBasics2.component';
 
 @NgModule({
   declarations: [
-    AppComponent, AppUIBasics,AppAngularBasics1
+    AppComponent, AppUIBasics,AppAngularBasics1, AppAngularBasics2
   ],
   imports: [
     BrowserModule,

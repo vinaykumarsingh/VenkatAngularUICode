@@ -1,3 +1,11 @@
-<div>
-    <span>AngularBasics1 is working in Span</span><br>
+<div class="angularBasic1Container">
+    <span>{{title | lowercase }}</span><br>
+    <p>A: {{a | percent}}</p>
+    <p>A: {{a | currency:'CAD'}}</p>
+
+    
+    <h1>
+        {{title.length>0?"Hi":"By" + " " + " test"}}
+        {{1+2}}
+    </h1>
 </div>

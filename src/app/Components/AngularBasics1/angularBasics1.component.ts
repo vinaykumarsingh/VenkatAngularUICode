@@ -6,6 +6,10 @@ import { concat } from 'rxjs';
   styleUrls: ['./angularBasics1.component.css']
 })
 export class AppAngularBasics1 implements OnInit{
+
+  title = "Hi, Welcome1"
+  a: number = 0.259;
+
   constructor() {
   }
 

@@ -9,7 +9,8 @@ export class AppAngularBasics1 implements OnInit, OnDestroy{
 
   title = "Hi, Welcome1"
   a: number = 0.259;
-
+  xyz = "Data from parent to child";
+  abc = ""
   constructor() {
     console.log("I'm in constructor")
     
@@ -41,6 +42,11 @@ export class AppAngularBasics1 implements OnInit, OnDestroy{
 
   ngOnDestroy(){
     console.log("destroying child...")
+  }
+  childToParentEventHandler(event) {
+    debugger;
+    console.log(event)
+    this.abc = event
   }
 
 }

@@ -1,12 +1,14 @@
 <div class="angularBasic1Container">
+<div class="parentContent">
     <p>Static text</p>
     <span>{{title | lowercase }}</span><br>
     <p>A: {{a | percent}}</p>
     <p>A: {{a | currency:'CAD'}}</p>
-
-    
-    <h1>
-        {{title.length>0?"Hi":"By" + " " + " test"}}
-        {{1+2}}
-    </h1>
+    <div>data from child to parent====> {{abc}}</div>
 </div>
+
+    <div>Child Componnet=>>>>>>>>>>></div>
+    <app-angularBasics2 [dataFromParent]="xyz" (childEvent)="childToParentEventHandler($event)"></app-angularBasics2>
+</div>
+[]=>>>>> Property binding
+()=======> Event Binding

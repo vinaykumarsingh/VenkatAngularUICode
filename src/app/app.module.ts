@@ -8,6 +8,7 @@ import { AppAngularBasics1 } from "./Components/AngularBasics1/angularBasics1.co
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppAngularBasics2 } from './Components/AngularBasics2/angularBasics2.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AppAngularBasics2 } from './Components/AngularBasics2/angularBasics2.co
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent, ]

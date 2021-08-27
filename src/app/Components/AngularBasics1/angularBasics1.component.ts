@@ -11,6 +11,7 @@ export class AppAngularBasics1 implements OnInit, OnDestroy{
   a: number = 0.259;
   xyz = "Data from parent to child";
   abc = ""
+  twoWayBindingData = "twoWayBindingData works!!"
   constructor() {
     console.log("I'm in constructor")
     

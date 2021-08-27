@@ -415,3 +415,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   .inputContainer + input {
     border: 20px solid rgb(255, 0, 212) !important
   }
+body {
+  margin: 40px;
+}

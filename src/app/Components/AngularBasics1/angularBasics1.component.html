@@ -6,6 +6,11 @@
     <p>A: {{a | currency:'CAD'}}</p>
     <div>data from child to parent====> {{abc}}</div>
 </div>
+    <div class="twoWayBindingContainer">
+        <span>Two way binding=>>>>>>>>>>></span>
+        <input type="text" [(ngModel)]="twoWayBindingData" value="twoWayBindingData"/><br/>
+        <span>{{twoWayBindingData}}</span>
+    </div>
 
     <div>Child Componnet=>>>>>>>>>>></div>
     <app-angularBasics2 [dataFromParent]="xyz" (childEvent)="childToParentEventHandler($event)"></app-angularBasics2>

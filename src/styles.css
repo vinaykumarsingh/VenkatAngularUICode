@@ -404,10 +404,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     border: 10px solid chartreuse;
   }
 /* //Psudo class */
-  a::before{
+  /* a::before{
     border: 10px solid red;
     content: 'test';
-  }
+  } */
 
   .inputContainer> input {
     border: 20px solid rgb(157, 255, 0); 
@@ -417,4 +417,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 body {
   margin: 40px;
+}
+nav ul {
+  display: flex;
+  background: #000;
+}
+nav ul li {
+  padding: 0 25px;
+  list-style: none;
+  list-style: none;
+}
+
+nav ul li a {
+  color: #fff;
 }

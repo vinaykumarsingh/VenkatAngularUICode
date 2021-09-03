@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppAngularBasics2 } from './Components/AngularBasics2/angularBasics2.component';
 import { FormsModule } from '@angular/forms';
 import { ShareDataService } from './Service/shareData.service';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ShareDataService } from './Service/shareData.service';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [ShareDataService],
   bootstrap: [AppComponent, ]

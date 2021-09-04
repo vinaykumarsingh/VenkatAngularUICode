@@ -1,19 +1,30 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-    providedIn: 'root',
-  })
-  
-  export class ShareDataService {
-    courses= ["Shared Data1", "Shared Data2", "Shared Data3", "Shared Data4", ];
-    constructor() { }
+  providedIn: 'root',
+})
 
-    getCourses () {
-        return this.courses
-    }
+export class ShareDataService {
+  apiEndPoints='https://jsonplaceholder.typicode.com/users'
 
-    setCourses (data) {
-      this.courses.push(data)
-    }
-  
+  users:any;
+
+
+  constructor(private http: HttpClient) { }
+
+  getCourses() {
+    this.http.get(this.apiEndPoints)
+    .subscribe((data) => 
+      {
+        this.users = data;
+      }
+    );
   }
+
+
+  setCourses(data) {
+    // this.courses.push(data)
+  }
+
+}

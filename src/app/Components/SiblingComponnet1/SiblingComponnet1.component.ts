@@ -19,8 +19,9 @@ export class AppSiblingComponnet1 implements OnInit{
 
   }
   getDataFromService() {
-    this.datafromSharedService = this.shareDataService.getCourses();
-    console.log('this.datafromSharedService ===>', this.datafromSharedService )
+    this.shareDataService.getCourses().subscribe((data)=>{
+      this.datafromSharedService = data
+    });
   }
 
 }

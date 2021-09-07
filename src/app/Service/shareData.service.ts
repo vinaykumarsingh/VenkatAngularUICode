@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -10,16 +11,10 @@ export class ShareDataService {
 
   users:any;
 
-
   constructor(private http: HttpClient) { }
 
-  getCourses() {
-    this.http.get(this.apiEndPoints)
-    .subscribe((data) => 
-      {
-        this.users = data;
-      }
-    );
+  getCourses(): Observable<any> {
+   return this.http.get(this.apiEndPoints)
   }
 
 

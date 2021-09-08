@@ -1,5 +1,11 @@
 <div>SiblingComponnet1 works</div>
 <button type="button" class="btn btn-primary" (click)="getDataFromService()">1Get Data From Servise</button>
 <ul>
-    <li *ngFor="let item of datafromSharedService; index as i">{{item.username}}</li>    
+    <li *ngFor="let item of datafromSharedService; index as i">
+        <span>{{item.username + " "}}</span> <span>&nbsp;</span>
+        <span *ngIf="item.id>5">{{item.email}}</span><span>&nbsp;</span>
+        <span *ngIf="item.id>5">{{item.website}}</span><span>&nbsp;</span>
+        <span *ngIf="isActive1">{{item.phone}}</span><span>&nbsp;</span>
+        <span *ngIf="isActive2">{{item.name}}</span><span>&nbsp;</span>
+    </li>
 </ul>

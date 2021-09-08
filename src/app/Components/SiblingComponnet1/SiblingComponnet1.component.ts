@@ -10,6 +10,11 @@ import { ShareDataService } from 'src/app/Service/shareData.service';
 export class AppSiblingComponnet1 implements OnInit{
 
   datafromSharedService:any;
+  arrayData = ['a', [], {}, true, ]
+  isActive1= false;
+  isActive2 = false;
+
+
 
   constructor(private shareDataService :ShareDataService) {
   }
@@ -20,8 +25,13 @@ export class AppSiblingComponnet1 implements OnInit{
   }
   getDataFromService() {
     this.shareDataService.getCourses().subscribe((data)=>{
+      debugger;
       this.datafromSharedService = data
+      this.isActive2= true
     });
   }
 
 }
+
+
+

@@ -1,6 +1,8 @@
 <div>SiblingComponnet1 works</div>
 <button type="button" class="btn btn-primary" (click)="getDataFromService()">1Get Data From Servise</button>
-<ul>
+
+
+<ul class="ffkflk">
     <li *ngFor="let item of datafromSharedService; index as i">
         <span>{{item.username + " "}}</span> <span>&nbsp;</span>
         <span *ngIf="item.id>5">{{item.email}}</span><span>&nbsp;</span>
@@ -9,3 +11,16 @@
         <span *ngIf="isActive2">{{item.name}}</span><span>&nbsp;</span>
     </li>
 </ul>
+
+
+
+
+<div *ngIf="isValid;else other_content">
+    content here ...
+</div>
+
+<ng-template #other_content>
+    <div class="TestIFElse">
+        other content here ...
+    </div>
+</ng-template>

@@ -13,8 +13,8 @@ export class AppSiblingComponnet1 implements OnInit{
   arrayData = ['a', [], {}, true, ]
   isActive1= false;
   isActive2 = false;
-
-
+  isValid =true;
+  
 
   constructor(private shareDataService :ShareDataService) {
   }
@@ -28,6 +28,7 @@ export class AppSiblingComponnet1 implements OnInit{
       debugger;
       this.datafromSharedService = data
       this.isActive2= true
+      this.isValid =false;
     });
   }
 

@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactiveFormsInAngular',
@@ -14,7 +14,7 @@ export class AppReactiveFormsInAngular implements OnInit{
   
   ngOnInit() {
     this.profileForm = this.formBuilder.group({
-      firstName: [''],
+      firstName: ['', Validators.minLength(2) ],
       lastName: ['']
     });
   }

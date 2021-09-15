@@ -31,7 +31,9 @@ export class AppSiblingComponnet1 implements OnInit{
       this.isValid =false;
     });
   }
-
+testMergeConflict(){
+  return false;
+}
 }
 
 

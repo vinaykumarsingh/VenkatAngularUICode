@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { MatTableModule } from '@angular/material/table' 
 
 import { AppAngularBasics2 } from './Components/AngularBasics2/angularBasics2.component';
 import { ShareDataService } from './Service/shareData.service';
@@ -27,7 +27,8 @@ import { AppReactiveFormsInAngular } from './Components/ReactiveFormsInAngular/R
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTableModule
   ],
   providers: [ShareDataService],
   bootstrap: [AppComponent, ]

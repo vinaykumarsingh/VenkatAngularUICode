@@ -1,3 +1,7 @@
 ul li span {
     padding: 0 20px;
 }
+
+::ng-deep th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+    min-width: 141px;
+}

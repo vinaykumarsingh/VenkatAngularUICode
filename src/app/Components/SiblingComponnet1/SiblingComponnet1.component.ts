@@ -65,7 +65,9 @@ export class AppSiblingComponnet1 implements OnInit{
       console.log("this.dataSource=====>", this.dataSource)
     });
   }
-
+testMergeConflict(){
+  return false;
+}
 }
 
 

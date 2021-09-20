@@ -4,7 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatTableModule } from '@angular/material/table' 
+import { MatTableModule } from '@angular/material/table'
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+
 
 import { AppAngularBasics2 } from './Components/AngularBasics2/angularBasics2.component';
 import { ShareDataService } from './Service/shareData.service';
@@ -18,8 +21,8 @@ import { AppReactiveFormsInAngular } from './Components/ReactiveFormsInAngular/R
 
 @NgModule({
   declarations: [
-    AppComponent, AppUIBasics,AppAngularBasics1, AppAngularBasics2,
-     AppSiblingComponnet2, AppSiblingComponnet1,AppReactiveFormsInAngular
+    AppComponent, AppUIBasics, AppAngularBasics1, AppAngularBasics2,
+    AppSiblingComponnet2, AppSiblingComponnet1, AppReactiveFormsInAngular
   ],
   imports: [
     BrowserModule,
@@ -28,9 +31,13 @@ import { AppReactiveFormsInAngular } from './Components/ReactiveFormsInAngular/R
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MatTableModule
+    MatTableModule,
+    MatButtonModule,
+    MatButtonToggleModule
+    ,
+
   ],
   providers: [ShareDataService],
-  bootstrap: [AppComponent, ]
+  bootstrap: [AppComponent,]
 })
 export class AppModule { }

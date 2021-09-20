@@ -3,5 +3,5 @@ ul li span {
 }
 
 ::ng-deep th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
-    min-width: 141px;
+    min-width: 115px;
 }

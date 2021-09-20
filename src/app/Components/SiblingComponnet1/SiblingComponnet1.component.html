@@ -1,6 +1,6 @@
 <div>SiblingComponnet1 works</div>
 <button type="button" class="btn btn-primary" (click)="getDataFromService()">Get Data From Servise</button>
-
+<button mat-raised-button color="accent"  (click)="getDataFromService()">Material Button</button>
 <!-- 
 <ul class="ffkflk">
     <li *ngFor="let item of datafromSharedService; index as i">
@@ -27,7 +27,7 @@
 
 <!-- 'name', 'phone', 'username', 'website', 'email' -->
 
-<div class="mat-elevation-z8">
+<div class="mat-elevation-z8" *ngIf="isShowTable">
     <table mat-table [dataSource]="dataSource">
 
         <!-- Position Column -->
@@ -65,6 +65,17 @@
             <th mat-header-cell *matHeaderCellDef> Email </th>
             <td mat-cell *matCellDef="let element"> {{element.email}} </td>
         </ng-container>
+
+        <ng-container matColumnDef="company">
+            <th mat-header-cell *matHeaderCellDef> company </th>
+            <td mat-cell *matCellDef="let element"> {{element.company.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="address">
+            <th mat-header-cell *matHeaderCellDef> address </th>
+            <td mat-cell *matCellDef="let element"> {{element.address.city}} </td>
+        </ng-container>
+
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
